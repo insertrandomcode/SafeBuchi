@@ -1,0 +1,1375 @@
+----- ABP(BW)datasize=2_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.13618016242980957 = 0.13610339164733887 + 7.677078247070312e-05
+Time[NSB]: 0.038736581802368164
+Equiv: True
+
+----- ABP(BW)datasize=2_infinitely_often_read_write.gm -----
+Time[ SB]: 0.025462627410888672 = 0.020441532135009766 + 0.005021095275878906
+Time[NSB]: 0.003870725631713867
+Equiv: True
+
+----- ABP(BW)datasize=2_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.006431102752685547 = 0.006392955780029297 + 3.814697265625e-05
+Time[NSB]: 0.0014541149139404297
+Equiv: True
+
+----- ABP(BW)datasize=2_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.014700889587402344 = 0.01458597183227539 + 0.00011491775512695312
+Time[NSB]: 0.0024068355560302734
+Equiv: True
+
+----- ABP(BW)datasize=2_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.016112804412841797 = 0.016067028045654297 + 4.57763671875e-05
+Time[NSB]: 0.005630970001220703
+Equiv: True
+
+----- ABP(BW)datasize=2_no_duplication_of_messages.gm -----
+Time[ SB]: 0.04735541343688965 = 0.04728364944458008 + 7.176399230957031e-05
+Time[NSB]: 0.0007445812225341797
+Equiv: True
+
+----- ABP(BW)datasize=2_no_generation_of_messages.gm -----
+Time[ SB]: 0.004530668258666992 = 0.004493236541748047 + 3.743171691894531e-05
+Time[NSB]: 0.00025153160095214844
+Equiv: True
+
+----- ABP(BW)datasize=2_nodeadlock.gm -----
+Time[ SB]: 0.0056116580963134766 = 0.005531787872314453 + 7.987022399902344e-05
+Time[NSB]: 0.00040459632873535156
+Equiv: True
+
+----- ABP(BW)datasize=2_read_then_eventually_send.gm -----
+Time[ SB]: 0.016591548919677734 = 0.016524076461791992 + 6.747245788574219e-05
+Time[NSB]: 0.013408660888671875
+Equiv: True
+
+----- ABP(BW)datasize=4_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.2883260250091553 = 0.2882497310638428 + 7.62939453125e-05
+Time[NSB]: 0.080047607421875
+Equiv: True
+
+----- ABP(BW)datasize=4_infinitely_often_read_write.gm -----
+Time[ SB]: 0.05223798751831055 = 0.03780698776245117 + 0.014430999755859375
+Time[NSB]: 0.014506816864013672
+Equiv: True
+
+----- ABP(BW)datasize=4_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.02037215232849121 = 0.02032947540283203 + 4.267692565917969e-05
+Time[NSB]: 0.003240346908569336
+Equiv: True
+
+----- ABP(BW)datasize=4_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.08411240577697754 = 0.0840444564819336 + 6.794929504394531e-05
+Time[NSB]: 0.01568913459777832
+Equiv: True
+
+----- ABP(BW)datasize=4_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.03039407730102539 = 0.030323266983032227 + 7.081031799316406e-05
+Time[NSB]: 0.017261028289794922
+Equiv: True
+
+----- ABP(BW)datasize=4_no_duplication_of_messages.gm -----
+Time[ SB]: 0.044011831283569336 = 0.04394793510437012 + 6.389617919921875e-05
+Time[NSB]: 0.0014884471893310547
+Equiv: True
+
+----- ABP(BW)datasize=4_no_generation_of_messages.gm -----
+Time[ SB]: 0.05495738983154297 = 0.054900407791137695 + 5.698204040527344e-05
+Time[NSB]: 0.0007278919219970703
+Equiv: True
+
+----- ABP(BW)datasize=4_nodeadlock.gm -----
+Time[ SB]: 0.010308027267456055 = 0.010261774063110352 + 4.6253204345703125e-05
+Time[NSB]: 0.0002586841583251953
+Equiv: True
+
+----- ABP(BW)datasize=4_read_then_eventually_send.gm -----
+Time[ SB]: 0.06477904319763184 = 0.064361572265625 + 0.00041747093200683594
+Time[NSB]: 0.041661977767944336
+Equiv: True
+
+----- ABP(BW)datasize=8_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.7766785621643066 = 0.7759315967559814 + 0.0007469654083251953
+Time[NSB]: 0.27504515647888184
+Equiv: True
+
+----- ABP(BW)datasize=8_infinitely_often_read_write.gm -----
+Time[ SB]: 0.05259418487548828 = 0.040192604064941406 + 0.012401580810546875
+Time[NSB]: 0.016603469848632812
+Equiv: True
+
+----- ABP(BW)datasize=8_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.024357080459594727 = 0.02429342269897461 + 6.365776062011719e-05
+Time[NSB]: 0.0031142234802246094
+Equiv: True
+
+----- ABP(BW)datasize=8_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.19365358352661133 = 0.19360136985778809 + 5.221366882324219e-05
+Time[NSB]: 0.03440666198730469
+Equiv: True
+
+----- ABP(BW)datasize=8_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.04982161521911621 = 0.04976177215576172 + 5.984306335449219e-05
+Time[NSB]: 0.024011850357055664
+Equiv: True
+
+----- ABP(BW)datasize=8_no_duplication_of_messages.gm -----
+Time[ SB]: 0.13930130004882812 = 0.13923072814941406 + 7.05718994140625e-05
+Time[NSB]: 0.0012636184692382812
+Equiv: True
+
+----- ABP(BW)datasize=8_no_generation_of_messages.gm -----
+Time[ SB]: 0.14402365684509277 = 0.14392495155334473 + 9.870529174804688e-05
+Time[NSB]: 0.0014340877532958984
+Equiv: True
+
+----- ABP(BW)datasize=8_nodeadlock.gm -----
+Time[ SB]: 0.0220792293548584 = 0.021989107131958008 + 9.012222290039062e-05
+Time[NSB]: 0.00046825408935546875
+Equiv: True
+
+----- ABP(BW)datasize=8_read_then_eventually_send.gm -----
+Time[ SB]: 0.22096991539001465 = 0.2209162712097168 + 5.364418029785156e-05
+Time[NSB]: 0.11288809776306152
+Equiv: True
+
+----- ABPdatasize=2_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.09656977653503418 = 0.09644627571105957 + 0.00012350082397460938
+Time[NSB]: 0.034404754638671875
+Equiv: True
+
+----- ABPdatasize=2_infinitely_often_lost.gm -----
+Time[ SB]: 0.025780439376831055 = 0.025702714920043945 + 7.772445678710938e-05
+Time[NSB]: 0.013185977935791016
+Equiv: True
+
+----- ABPdatasize=2_infinitely_often_read_write.gm -----
+Time[ SB]: 0.026702165603637695 = 0.02093219757080078 + 0.005769968032836914
+Time[NSB]: 0.01236104965209961
+Equiv: True
+
+----- ABPdatasize=2_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.018372774124145508 = 0.018305540084838867 + 6.723403930664062e-05
+Time[NSB]: 0.0018932819366455078
+Equiv: True
+
+----- ABPdatasize=2_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.02254319190979004 = 0.022459745407104492 + 8.344650268554688e-05
+Time[NSB]: 0.007053375244140625
+Equiv: True
+
+----- ABPdatasize=2_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.008346319198608398 = 0.008305788040161133 + 4.0531158447265625e-05
+Time[NSB]: 0.00558781623840332
+Equiv: True
+
+----- ABPdatasize=2_no_duplication_of_messages.gm -----
+Time[ SB]: 0.010475635528564453 = 0.010429620742797852 + 4.601478576660156e-05
+Time[NSB]: 0.0002803802490234375
+Equiv: True
+
+----- ABPdatasize=2_no_generation_of_messages.gm -----
+Time[ SB]: 0.0023076534271240234 = 0.0022826194763183594 + 2.5033950805664062e-05
+Time[NSB]: 0.00012803077697753906
+Equiv: True
+
+----- ABPdatasize=2_nodeadlock.gm -----
+Time[ SB]: 0.0023412704467773438 = 0.002290010452270508 + 5.125999450683594e-05
+Time[NSB]: 0.0002205371856689453
+Equiv: True
+
+----- ABPdatasize=2_read_then_eventually_send.gm -----
+Time[ SB]: 0.006402730941772461 = 0.006377696990966797 + 2.5033950805664062e-05
+Time[NSB]: 0.004509925842285156
+Equiv: True
+
+----- ABPdatasize=2_read_then_eventually_send_if_fair.gm -----
+Time[ SB]: 0.034693002700805664 = 0.03464341163635254 + 4.9591064453125e-05
+Time[NSB]: 0.0016927719116210938
+Equiv: True
+
+----- ABPdatasize=4_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.17122340202331543 = 0.1711595058441162 + 6.389617919921875e-05
+Time[NSB]: 0.044914960861206055
+Equiv: True
+
+----- ABPdatasize=4_infinitely_often_lost.gm -----
+Time[ SB]: 0.017395496368408203 = 0.017272233963012695 + 0.0001232624053955078
+Time[NSB]: 0.00693964958190918
+Equiv: True
+
+----- ABPdatasize=4_infinitely_often_read_write.gm -----
+Time[ SB]: 0.03116607666015625 = 0.020883560180664062 + 0.010282516479492188
+Time[NSB]: 0.012092351913452148
+Equiv: True
+
+----- ABPdatasize=4_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.011393547058105469 = 0.011332273483276367 + 6.127357482910156e-05
+Time[NSB]: 0.0018544197082519531
+Equiv: True
+
+----- ABPdatasize=4_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.047743797302246094 = 0.04766440391540527 + 7.939338684082031e-05
+Time[NSB]: 0.01173257827758789
+Equiv: True
+
+----- ABPdatasize=4_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.022742509841918945 = 0.02253246307373047 + 0.00021004676818847656
+Time[NSB]: 0.014519691467285156
+Equiv: True
+
+----- ABPdatasize=4_no_duplication_of_messages.gm -----
+Time[ SB]: 0.06510376930236816 = 0.06502079963684082 + 8.296966552734375e-05
+Time[NSB]: 0.0011754035949707031
+Equiv: True
+
+----- ABPdatasize=4_no_generation_of_messages.gm -----
+Time[ SB]: 0.021875619888305664 = 0.021822452545166016 + 5.316734313964844e-05
+Time[NSB]: 0.000499725341796875
+Equiv: True
+
+----- ABPdatasize=4_nodeadlock.gm -----
+Time[ SB]: 0.007925271987915039 = 0.007874011993408203 + 5.125999450683594e-05
+Time[NSB]: 0.0002040863037109375
+Equiv: True
+
+----- ABPdatasize=4_read_then_eventually_send.gm -----
+Time[ SB]: 0.053055524826049805 = 0.052985191345214844 + 7.033348083496094e-05
+Time[NSB]: 0.03020477294921875
+Equiv: True
+
+----- ABPdatasize=4_read_then_eventually_send_if_fair.gm -----
+Time[ SB]: 0.0328211784362793 = 0.03276658058166504 + 5.459785461425781e-05
+Time[NSB]: 0.0033540725708007812
+Equiv: True
+
+----- ABPdatasize=8_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.5895040035247803 = 0.5893411636352539 + 0.0001628398895263672
+Time[NSB]: 0.2175149917602539
+Equiv: True
+
+----- ABPdatasize=8_infinitely_often_lost.gm -----
+Time[ SB]: 0.054108381271362305 = 0.05353808403015137 + 0.0005702972412109375
+Time[NSB]: 0.020750999450683594
+Equiv: True
+
+----- ABPdatasize=8_infinitely_often_read_write.gm -----
+Time[ SB]: 0.18846631050109863 = 0.16180896759033203 + 0.0266573429107666
+Time[NSB]: 0.018599271774291992
+Equiv: True
+
+----- ABPdatasize=8_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.02448272705078125 = 0.024418354034423828 + 6.437301635742188e-05
+Time[NSB]: 0.004205226898193359
+Equiv: True
+
+----- ABPdatasize=8_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.32198524475097656 = 0.3218379020690918 + 0.00014734268188476562
+Time[NSB]: 0.0556640625
+Equiv: True
+
+----- ABPdatasize=8_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.039585113525390625 = 0.0395350456237793 + 5.0067901611328125e-05
+Time[NSB]: 0.023199796676635742
+Equiv: True
+
+----- ABPdatasize=8_no_duplication_of_messages.gm -----
+Time[ SB]: 0.21367406845092773 = 0.21355605125427246 + 0.00011801719665527344
+Time[NSB]: 0.002729177474975586
+Equiv: True
+
+----- ABPdatasize=8_no_generation_of_messages.gm -----
+Time[ SB]: 0.14952564239501953 = 0.1494457721710205 + 7.987022399902344e-05
+Time[NSB]: 0.0015163421630859375
+Equiv: True
+
+----- ABPdatasize=8_nodeadlock.gm -----
+Time[ SB]: 0.01792764663696289 = 0.017835378646850586 + 9.226799011230469e-05
+Time[NSB]: 0.0011949539184570312
+Equiv: True
+
+----- ABPdatasize=8_read_then_eventually_send.gm -----
+Time[ SB]: 0.15413713455200195 = 0.15408086776733398 + 5.626678466796875e-05
+Time[NSB]: 0.06942224502563477
+Equiv: True
+
+----- ABPdatasize=8_read_then_eventually_send_if_fair.gm -----
+Time[ SB]: 0.0830998420715332 = 0.08297181129455566 + 0.00012803077697753906
+Time[NSB]: 0.008847236633300781
+Equiv: True
+
+----- BRPdatasize=2_counting.gm -----
+Time[ SB]: 111.06644177436829 = 111.01468229293823 + 0.05175948143005371
+Time[NSB]: 71.108323097229
+Equiv: True
+
+----- BRPdatasize=2_nodeadlock.gm -----
+Time[ SB]: 0.3567993640899658 = 0.3351881504058838 + 0.02161121368408203
+Time[NSB]: 0.1074824333190918
+Equiv: True
+
+----- BRPdatasize=4_nodeadlock.gm -----
+Time[ SB]: 1.5079543590545654 = 1.507183313369751 + 0.0007710456848144531
+Time[NSB]: 0.02643275260925293
+Equiv: True
+
+----- CABPdatasize=2_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.5755481719970703 = 0.5750076770782471 + 0.0005404949188232422
+Time[NSB]: 0.2555851936340332
+Equiv: True
+
+----- CABPdatasize=2_infinitely_often_read_write.gm -----
+Time[ SB]: 0.3220672607421875 = 0.2549474239349365 + 0.06711983680725098
+Time[NSB]: 0.07334184646606445
+Equiv: True
+
+----- CABPdatasize=2_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.15100932121276855 = 0.15096378326416016 + 4.553794860839844e-05
+Time[NSB]: 0.03655099868774414
+Equiv: True
+
+----- CABPdatasize=2_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.22951102256774902 = 0.22943687438964844 + 7.414817810058594e-05
+Time[NSB]: 0.05426812171936035
+Equiv: True
+
+----- CABPdatasize=2_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.07036995887756348 = 0.07026839256286621 + 0.00010156631469726562
+Time[NSB]: 0.0485687255859375
+Equiv: True
+
+----- CABPdatasize=2_no_duplication_of_messages.gm -----
+Time[ SB]: 0.10237240791320801 = 0.10229754447937012 + 7.486343383789062e-05
+Time[NSB]: 0.0009579658508300781
+Equiv: True
+
+----- CABPdatasize=2_no_generation_of_messages.gm -----
+Time[ SB]: 0.03933596611022949 = 0.0392765998840332 + 5.936622619628906e-05
+Time[NSB]: 0.00047707557678222656
+Equiv: True
+
+----- CABPdatasize=2_nodeadlock.gm -----
+Time[ SB]: 0.037851572036743164 = 0.03767895698547363 + 0.00017261505126953125
+Time[NSB]: 0.0011281967163085938
+Equiv: True
+
+----- CABPdatasize=2_read_then_eventually_send.gm -----
+Time[ SB]: 0.11544084548950195 = 0.11537384986877441 + 6.699562072753906e-05
+Time[NSB]: 0.0731809139251709
+Equiv: True
+
+----- CABPdatasize=4_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 4.345776796340942 = 4.345165729522705 + 0.0006110668182373047
+Time[NSB]: 1.2505078315734863
+Equiv: True
+
+----- CABPdatasize=4_infinitely_often_read_write.gm -----
+Time[ SB]: 0.24932122230529785 = 0.18061566352844238 + 0.06870555877685547
+Time[NSB]: 0.0771477222442627
+Equiv: True
+
+----- CABPdatasize=4_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.24844121932983398 = 0.24839258193969727 + 4.863739013671875e-05
+Time[NSB]: 0.04912543296813965
+Equiv: True
+
+----- CABPdatasize=4_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.7303657531738281 = 0.7302722930908203 + 9.34600830078125e-05
+Time[NSB]: 0.24271368980407715
+Equiv: True
+
+----- CABPdatasize=4_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.17364001274108887 = 0.1735067367553711 + 0.00013327598571777344
+Time[NSB]: 0.10446500778198242
+Equiv: True
+
+----- CABPdatasize=4_no_duplication_of_messages.gm -----
+Time[ SB]: 0.508054256439209 = 0.507582426071167 + 0.0004718303680419922
+Time[NSB]: 0.007978200912475586
+Equiv: True
+
+----- CABPdatasize=4_no_generation_of_messages.gm -----
+Time[ SB]: 0.17801761627197266 = 0.17775464057922363 + 0.00026297569274902344
+Time[NSB]: 0.002354860305786133
+Equiv: True
+
+----- CABPdatasize=4_nodeadlock.gm -----
+Time[ SB]: 0.06652045249938965 = 0.06641960144042969 + 0.00010085105895996094
+Time[NSB]: 0.0011157989501953125
+Equiv: True
+
+----- CABPdatasize=4_read_then_eventually_send.gm -----
+Time[ SB]: 0.6164689064025879 = 0.6163337230682373 + 0.00013518333435058594
+Time[NSB]: 0.3132472038269043
+Equiv: True
+
+----- CABPdatasize=8_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 34.93973088264465 = 34.93828105926514 + 0.0014498233795166016
+Time[NSB]: 11.052021026611328
+Equiv: True
+
+----- CABPdatasize=8_infinitely_often_read_write.gm -----
+Time[ SB]: 1.1603446006774902 = 0.8430101871490479 + 0.3173344135284424
+Time[NSB]: 0.3083152770996094
+Equiv: True
+
+----- CABPdatasize=8_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.5529122352600098 = 0.5527610778808594 + 0.00015115737915039062
+Time[NSB]: 0.18957042694091797
+Equiv: True
+
+----- CABPdatasize=8_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 4.577606201171875 = 4.577253818511963 + 0.0003523826599121094
+Time[NSB]: 1.1016302108764648
+Equiv: True
+
+----- CABPdatasize=8_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.3748667240142822 = 0.37430644035339355 + 0.0005602836608886719
+Time[NSB]: 0.18530702590942383
+Equiv: True
+
+----- CABPdatasize=8_no_duplication_of_messages.gm -----
+Time[ SB]: 1.4416303634643555 = 1.4412751197814941 + 0.0003552436828613281
+Time[NSB]: 0.010503053665161133
+Equiv: True
+
+----- CABPdatasize=8_no_generation_of_messages.gm -----
+Time[ SB]: 0.9592583179473877 = 0.9587621688842773 + 0.0004961490631103516
+Time[NSB]: 0.008233785629272461
+Equiv: True
+
+----- CABPdatasize=8_nodeadlock.gm -----
+Time[ SB]: 0.15042757987976074 = 0.15009140968322754 + 0.0003361701965332031
+Time[NSB]: 0.0031795501708984375
+Equiv: True
+
+----- CABPdatasize=8_read_then_eventually_send.gm -----
+Time[ SB]: 2.429795742034912 = 2.4292566776275635 + 0.0005390644073486328
+Time[NSB]: 1.7310502529144287
+Equiv: True
+
+----- CCP_3.2._max_copies_per_region.gm -----
+Time[ SB]: 0.0026009082794189453 = 0.0017962455749511719 + 0.0008046627044677734
+Time[NSB]: 0.003438234329223633
+Equiv: True
+
+----- Clobberwidth=4_height=4_black_has_winning_strategy.gm -----
+Time[ SB]: 111.5051486492157 = 111.48301291465759 + 0.02213573455810547
+Time[NSB]: 90.29530334472656
+Equiv: True
+
+----- Clobberwidth=4_height=4_white_has_winning_strategy.gm -----
+Time[ SB]: 65.6942846775055 = 65.65686368942261 + 0.03742098808288574
+Time[NSB]: 39.41978073120117
+Equiv: True
+
+----- Debug_spec_nodeadlock.gm -----
+Time[ SB]: 0.02668929100036621 = 0.011919498443603516 + 0.014769792556762695
+Time[NSB]: 0.08715367317199707
+Equiv: True
+
+----- Domineeringwidth=4_height=4_player1_has_winning_strategy.gm -----
+Time[ SB]: 0.1530930995941162 = 0.15303516387939453 + 5.793571472167969e-05
+Time[NSB]: 0.06696295738220215
+Equiv: True
+
+----- Domineeringwidth=4_height=4_player2_has_winning_strategy.gm -----
+Time[ SB]: 0.14854121208190918 = 0.1484525203704834 + 8.869171142578125e-05
+Time[NSB]: 0.0846719741821289
+Equiv: True
+
+----- Elevatorpolicy=FIFO_storeys=2_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.001527547836303711 = 0.0012848377227783203 + 0.00024271011352539062
+Time[NSB]: 0.0003108978271484375
+Equiv: True
+
+----- Elevatorpolicy=FIFO_storeys=3_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.002560853958129883 = 0.0021262168884277344 + 0.00043463706970214844
+Time[NSB]: 0.0006706714630126953
+Equiv: True
+
+----- Elevatorpolicy=FIFO_storeys=4_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.005251646041870117 = 0.004670143127441406 + 0.0005815029144287109
+Time[NSB]: 0.0006968975067138672
+Equiv: True
+
+----- Elevatorpolicy=FIFO_storeys=5_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.008927583694458008 = 0.006818532943725586 + 0.002109050750732422
+Time[NSB]: 0.004414796829223633
+Equiv: True
+
+----- Elevatorpolicy=FIFO_storeys=6_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.017906665802001953 = 0.013715744018554688 + 0.004190921783447266
+Time[NSB]: 0.0025358200073242188
+Equiv: True
+
+----- Elevatorpolicy=FIFO_storeys=7_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.0224609375 = 0.01838088035583496 + 0.004080057144165039
+Time[NSB]: 0.006416797637939453
+Equiv: True
+
+----- Elevatorpolicy=FIFO_storeys=8_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.027939558029174805 = 0.02372884750366211 + 0.004210710525512695
+Time[NSB]: 0.004572868347167969
+Equiv: True
+
+----- Elevatorpolicy=LIFO_storeys=2_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.002279520034790039 = 0.0018780231475830078 + 0.00040149688720703125
+Time[NSB]: 0.0005106925964355469
+Equiv: True
+
+----- Elevatorpolicy=LIFO_storeys=3_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.0027697086334228516 = 0.0027451515197753906 + 2.4557113647460938e-05
+Time[NSB]: 0.0010695457458496094
+Equiv: True
+
+----- Elevatorpolicy=LIFO_storeys=4_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.06684660911560059 = 0.06679987907409668 + 4.673004150390625e-05
+Time[NSB]: 0.01756143569946289
+Equiv: True
+
+----- Elevatorpolicy=LIFO_storeys=5_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 0.30947327613830566 = 0.30940699577331543 + 6.628036499023438e-05
+Time[NSB]: 0.10613751411437988
+Equiv: True
+
+----- Elevatorpolicy=LIFO_storeys=6_always_if_max_floor_requested_eventually_at_max_floor.gm -----
+Time[ SB]: 2.627631664276123 = 2.627253293991089 + 0.0003783702850341797
+Time[NSB]: 0.730107307434082
+Equiv: True
+
+----- Hanoindisks=10_eventually_done.gm -----
+Time[ SB]: 30.059757471084595 = 30.05841898918152 + 0.0013384819030761719
+Time[NSB]: 24.48453974723816
+Equiv: True
+
+----- Hanoindisks=11_eventually_done.gm -----
+Time[ SB]: 159.17860913276672 = 159.1736273765564 + 0.0049817562103271484
+Time[NSB]: 155.54997086524963
+Equiv: True
+
+----- Hanoindisks=8_eventually_done.gm -----
+Time[ SB]: 0.9075415134429932 = 0.9051814079284668 + 0.002360105514526367
+Time[NSB]: 0.8654248714447021
+Equiv: True
+
+----- Hanoindisks=9_eventually_done.gm -----
+Time[ SB]: 5.091007232666016 = 5.090645790100098 + 0.00036144256591796875
+Time[NSB]: 4.396284103393555
+Equiv: True
+
+----- Hesselinkdatasize=2_nodeadlock.gm -----
+Time[ SB]: 24.320208311080933 = 24.308553457260132 + 0.011654853820800781
+Time[NSB]: 0.2329237461090088
+Equiv: True
+
+----- Hesselinkdatasize=2_property2.gm -----
+Time[ SB]: 52.77949500083923 = 52.74735641479492 + 0.03213858604431152
+Time[NSB]: 0.4002342224121094
+Equiv: True
+
+----- IEEE1394nparties=2_datasize=2_headersize=2_acksize=2_nodeadlock.gm -----
+Time[ SB]: 8.002201318740845 = 7.985778331756592 + 0.01642298698425293
+Time[NSB]: 0.14102411270141602
+Equiv: True
+
+----- IEEE1394nparties=2_datasize=2_headersize=2_acksize=2_property1.gm -----
+Time[ SB]: 17.42115831375122 = 17.41226315498352 + 0.008895158767700195
+Time[NSB]: 0.16348648071289062
+Equiv: True
+
+----- IEEE1394nparties=2_datasize=2_headersize=2_acksize=2_property2.gm -----
+Time[ SB]: 18.496934413909912 = 18.48398995399475 + 0.012944459915161133
+Time[NSB]: 0.16289258003234863
+Equiv: True
+
+----- IEEE1394nparties=2_datasize=2_headersize=2_acksize=2_property5.gm -----
+Time[ SB]: 71.51890802383423 = 71.48515963554382 + 0.03374838829040527
+Time[NSB]: 0.6140725612640381
+Equiv: True
+
+----- Leadernparticipants=3_eventually-stable.gm -----
+Time[ SB]: 6.7782275676727295 = 6.747440576553345 + 0.030786991119384766
+Time[NSB]: 8.03504753112793
+Equiv: True
+
+----- Lift_(Correct)nlifts=2_liveness_1_1.gm -----
+Time[ SB]: 0.09235048294067383 = 0.0922541618347168 + 9.632110595703125e-05
+Time[NSB]: 0.02071666717529297
+Equiv: True
+
+----- Lift_(Correct)nlifts=2_liveness_1_2.gm -----
+Time[ SB]: 0.04767298698425293 = 0.04763078689575195 + 4.220008850097656e-05
+Time[NSB]: 0.014101028442382812
+Equiv: True
+
+----- Lift_(Correct)nlifts=2_liveness_2_1.gm -----
+Time[ SB]: 0.07827401161193848 = 0.07822823524475098 + 4.57763671875e-05
+Time[NSB]: 0.012417793273925781
+Equiv: True
+
+----- Lift_(Correct)nlifts=2_liveness_2_2.gm -----
+Time[ SB]: 0.10859227180480957 = 0.10853409767150879 + 5.817413330078125e-05
+Time[NSB]: 0.010402441024780273
+Equiv: True
+
+----- Lift_(Correct)nlifts=2_nodeadlock.gm -----
+Time[ SB]: 0.015095710754394531 = 0.014978170394897461 + 0.00011754035949707031
+Time[NSB]: 0.000827789306640625
+Equiv: True
+
+----- Lift_(Correct)nlifts=2_safety_1.gm -----
+Time[ SB]: 0.014595746994018555 = 0.014554023742675781 + 4.172325134277344e-05
+Time[NSB]: 0.00034499168395996094
+Equiv: True
+
+----- Lift_(Correct)nlifts=2_safety_2_1.gm -----
+Time[ SB]: 0.041219472885131836 = 0.041165828704833984 + 5.364418029785156e-05
+Time[NSB]: 0.0227968692779541
+Equiv: True
+
+----- Lift_(Correct)nlifts=2_safety_2_2.gm -----
+Time[ SB]: 0.02546095848083496 = 0.025426626205444336 + 3.4332275390625e-05
+Time[NSB]: 0.020838022232055664
+Equiv: True
+
+----- Lift_(Correct)nlifts=3_liveness_1_1.gm -----
+Time[ SB]: 3.873108148574829 = 3.8727457523345947 + 0.000362396240234375
+Time[NSB]: 2.6819422245025635
+Equiv: True
+
+----- Lift_(Correct)nlifts=3_liveness_1_2.gm -----
+Time[ SB]: 3.7882251739501953 = 3.7879810333251953 + 0.000244140625
+Time[NSB]: 2.2362117767333984
+Equiv: True
+
+----- Lift_(Correct)nlifts=4_nodeadlock.gm -----
+Time[ SB]: 3.9950859546661377 = 3.992126941680908 + 0.002959012985229492
+Time[NSB]: 0.04533886909484863
+Equiv: True
+
+----- Lift_(Correct)nlifts=4_safety_1.gm -----
+Time[ SB]: 2.8522682189941406 = 2.850785732269287 + 0.0014824867248535156
+Time[NSB]: 0.029395103454589844
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=2_liveness_1_1.gm -----
+Time[ SB]: 0.15364408493041992 = 0.15292835235595703 + 0.0007157325744628906
+Time[NSB]: 0.1118478775024414
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=2_liveness_1_2.gm -----
+Time[ SB]: 0.15960478782653809 = 0.15953707695007324 + 6.771087646484375e-05
+Time[NSB]: 0.07960009574890137
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=2_liveness_2_1.gm -----
+Time[ SB]: 0.1263272762298584 = 0.1262500286102295 + 7.724761962890625e-05
+Time[NSB]: 0.04885530471801758
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=2_liveness_2_2.gm -----
+Time[ SB]: 0.1351926326751709 = 0.13513827323913574 + 5.435943603515625e-05
+Time[NSB]: 0.0329585075378418
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=2_nodeadlock.gm -----
+Time[ SB]: 0.07381319999694824 = 0.07374978065490723 + 6.341934204101562e-05
+Time[NSB]: 0.0294497013092041
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=2_safety_1.gm -----
+Time[ SB]: 0.0441586971282959 = 0.04408979415893555 + 6.890296936035156e-05
+Time[NSB]: 0.000873565673828125
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=2_safety_2_1.gm -----
+Time[ SB]: 0.04065585136413574 = 0.04053831100463867 + 0.00011754035949707031
+Time[NSB]: 0.02312946319580078
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=2_safety_2_2.gm -----
+Time[ SB]: 0.09721183776855469 = 0.09717249870300293 + 3.933906555175781e-05
+Time[NSB]: 0.02925729751586914
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=3_liveness_1_1.gm -----
+Time[ SB]: 27.847100257873535 = 27.845611333847046 + 0.0014889240264892578
+Time[NSB]: 11.550118446350098
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=3_liveness_1_2.gm -----
+Time[ SB]: 23.86819291114807 = 23.865761756896973 + 0.002431154251098633
+Time[NSB]: 10.227436065673828
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=3_liveness_2_1.gm -----
+Time[ SB]: 2.1248629093170166 = 2.12341046333313 + 0.0014524459838867188
+Time[NSB]: 0.7732400894165039
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=3_liveness_2_2.gm -----
+Time[ SB]: 1.8798089027404785 = 1.879417896270752 + 0.0003910064697265625
+Time[NSB]: 0.800445556640625
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=3_nodeadlock.gm -----
+Time[ SB]: 19.52617883682251 = 19.52539587020874 + 0.0007829666137695312
+Time[NSB]: 16.700627088546753
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=3_safety_1.gm -----
+Time[ SB]: 1.6213736534118652 = 1.620523452758789 + 0.0008502006530761719
+Time[NSB]: 0.012267827987670898
+Equiv: True
+
+----- Lift_(Incorrect)nlifts=4_safety_1.gm -----
+Time[ SB]: 54.072837591171265 = 54.05228781700134 + 0.020549774169921875
+Time[NSB]: 0.40712952613830566
+Equiv: True
+
+----- Onebitdatasize=2_infinitely_often_read_write.gm -----
+Time[ SB]: 71.01244139671326 = 45.013386964797974 + 25.999054431915283
+Time[NSB]: 26.76028561592102
+Equiv: True
+
+----- Onebitdatasize=2_infinitely_often_receive_d1.gm -----
+Time[ SB]: 162.92918157577515 = 162.92438435554504 + 0.004797220230102539
+Time[NSB]: 53.79690742492676
+Equiv: True
+
+----- Onebitdatasize=2_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 309.2260391712189 = 309.21342611312866 + 0.012613058090209961
+Time[NSB]: 99.07208561897278
+Equiv: True
+
+----- Onebitdatasize=2_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 36.2167534828186 = 36.20726442337036 + 0.009489059448242188
+Time[NSB]: 6.308542013168335
+Equiv: True
+
+----- Onebitdatasize=2_message_can_be_lost_infinitely_often.gm -----
+Time[ SB]: 103.49088168144226 = 103.47896933555603 + 0.011912345886230469
+Time[NSB]: 90.5008339881897
+Equiv: True
+
+----- Onebitdatasize=2_messages_can_be_overtaken.gm -----
+Time[ SB]: 13.399378299713135 = 13.38932204246521 + 0.010056257247924805
+Time[NSB]: 2.274177074432373
+Equiv: True
+
+----- Onebitdatasize=2_messages_read_are_inevitably_sent.gm -----
+Time[ SB]: 100.20338606834412 = 100.19595980644226 + 0.007426261901855469
+Time[NSB]: 88.11568427085876
+Equiv: True
+
+----- Onebitdatasize=2_no_duplication_of_messages.gm -----
+Time[ SB]: 540.5816752910614 = 540.5717227458954 + 0.009952545166015625
+Time[NSB]: 497.0724539756775
+Equiv: True
+
+----- Onebitdatasize=2_no_generation_of_messages.gm -----
+Time[ SB]: 4.922011852264404 = 4.916021108627319 + 0.005990743637084961
+Time[NSB]: 0.06217145919799805
+Equiv: True
+
+----- Onebitdatasize=2_no_spontaneous_messages.gm -----
+Time[ SB]: 12.541647672653198 = 12.535629272460938 + 0.006018400192260742
+Time[NSB]: 0.08346271514892578
+Equiv: True
+
+----- Onebitdatasize=2_nodeadlock.gm -----
+Time[ SB]: 5.745767116546631 = 5.738614797592163 + 0.0071523189544677734
+Time[NSB]: 0.06917881965637207
+Equiv: True
+
+----- Onebitdatasize=2_read_then_eventually_send.gm -----
+Time[ SB]: 96.94184708595276 = 96.93288230895996 + 0.008964776992797852
+Time[NSB]: 935.4384052753448
+Equiv: True
+
+----- Onebitdatasize=3_infinitely_often_read_write.gm -----
+Time[ SB]: 316.33643436431885 = 183.54114389419556 + 132.7952904701233
+Time[NSB]: 140.97994756698608
+Equiv: True
+
+----- Onebitdatasize=3_infinitely_often_receive_d1.gm -----
+Time[ SB]: 640.233452796936 = 640.2162909507751 + 0.017161846160888672
+Time[NSB]: 191.51142859458923
+Equiv: True
+
+----- Onebitdatasize=3_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 117.92375922203064 = 117.89420318603516 + 0.0295560359954834
+Time[NSB]: 20.498210430145264
+Equiv: True
+
+----- ABP(BW)datasize=2_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.04358649253845215 = 0.04354548454284668 + 4.100799560546875e-05
+Time[NSB]: 0.01266336441040039
+Equiv: True
+
+----- ABP(BW)datasize=2_infinitely_often_read_write.gm -----
+Time[ SB]: 0.00889444351196289 = 0.005967617034912109 + 0.0029268264770507812
+Time[NSB]: 0.00382232666015625
+Equiv: True
+
+----- ABP(BW)datasize=2_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.006131410598754883 = 0.006103515625 + 2.7894973754882812e-05
+Time[NSB]: 0.0005621910095214844
+Equiv: True
+
+----- ABP(BW)datasize=2_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.011768102645874023 = 0.01172947883605957 + 3.8623809814453125e-05
+Time[NSB]: 0.0015735626220703125
+Equiv: True
+
+----- ABP(BW)datasize=2_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.006853580474853516 = 0.006828784942626953 + 2.47955322265625e-05
+Time[NSB]: 0.0036635398864746094
+Equiv: True
+
+----- ABP(BW)datasize=2_no_duplication_of_messages.gm -----
+Time[ SB]: 0.03009629249572754 = 0.030063152313232422 + 3.314018249511719e-05
+Time[NSB]: 0.0002770423889160156
+Equiv: True
+
+----- ABP(BW)datasize=2_no_generation_of_messages.gm -----
+Time[ SB]: 0.0030760765075683594 = 0.0030472278594970703 + 2.8848648071289062e-05
+Time[NSB]: 0.0004265308380126953
+Equiv: True
+
+----- ABP(BW)datasize=2_nodeadlock.gm -----
+Time[ SB]: 0.004419565200805664 = 0.004389762878417969 + 2.9802322387695312e-05
+Time[NSB]: 0.00011277198791503906
+Equiv: True
+
+----- ABP(BW)datasize=2_read_then_eventually_send.gm -----
+Time[ SB]: 0.010861635208129883 = 0.010823965072631836 + 3.7670135498046875e-05
+Time[NSB]: 0.004779815673828125
+Equiv: True
+
+----- ABP(BW)datasize=4_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.24127817153930664 = 0.24122023582458496 + 5.793571472167969e-05
+Time[NSB]: 0.08293509483337402
+Equiv: True
+
+----- ABP(BW)datasize=4_infinitely_often_read_write.gm -----
+Time[ SB]: 0.02466273307800293 = 0.017439603805541992 + 0.0072231292724609375
+Time[NSB]: 0.007251262664794922
+Equiv: True
+
+----- ABP(BW)datasize=4_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.009414911270141602 = 0.009341239929199219 + 7.367134094238281e-05
+Time[NSB]: 0.0015635490417480469
+Equiv: True
+
+----- ABP(BW)datasize=4_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.047275543212890625 = 0.04721879959106445 + 5.6743621826171875e-05
+Time[NSB]: 0.008815526962280273
+Equiv: True
+
+----- ABP(BW)datasize=4_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.024461030960083008 = 0.02442765235900879 + 3.337860107421875e-05
+Time[NSB]: 0.007204294204711914
+Equiv: True
+
+----- ABP(BW)datasize=4_no_duplication_of_messages.gm -----
+Time[ SB]: 0.04599356651306152 = 0.04591107368469238 + 8.249282836914062e-05
+Time[NSB]: 0.0006995201110839844
+Equiv: True
+
+----- ABP(BW)datasize=4_no_generation_of_messages.gm -----
+Time[ SB]: 0.03696846961975098 = 0.036919355392456055 + 4.9114227294921875e-05
+Time[NSB]: 0.0005381107330322266
+Equiv: True
+
+----- ABP(BW)datasize=4_nodeadlock.gm -----
+Time[ SB]: 0.0058324337005615234 = 0.005758762359619141 + 7.367134094238281e-05
+Time[NSB]: 0.0003414154052734375
+Equiv: True
+
+----- ABP(BW)datasize=4_read_then_eventually_send.gm -----
+Time[ SB]: 0.03264141082763672 = 0.03258490562438965 + 5.650520324707031e-05
+Time[NSB]: 0.03445029258728027
+Equiv: True
+
+----- ABP(BW)datasize=8_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.730208158493042 = 0.7298703193664551 + 0.00033783912658691406
+Time[NSB]: 0.23536372184753418
+Equiv: True
+
+----- ABP(BW)datasize=8_infinitely_often_read_write.gm -----
+Time[ SB]: 0.058539390563964844 = 0.047670841217041016 + 0.010868549346923828
+Time[NSB]: 0.020055294036865234
+Equiv: True
+
+----- ABP(BW)datasize=8_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.02097797393798828 = 0.020945072174072266 + 3.2901763916015625e-05
+Time[NSB]: 0.004009723663330078
+Equiv: True
+
+----- ABP(BW)datasize=8_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.16650986671447754 = 0.16643357276916504 + 7.62939453125e-05
+Time[NSB]: 0.03998899459838867
+Equiv: True
+
+----- ABP(BW)datasize=8_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.048296213150024414 = 0.0480959415435791 + 0.0002002716064453125
+Time[NSB]: 0.028084754943847656
+Equiv: True
+
+----- Onebitdatasize=3_message_can_be_lost_infinitely_often.gm -----
+Time[ SB]: 568.0543971061707 = 568.0364525318146 + 0.0179445743560791
+Time[NSB]: 497.89038825035095
+Equiv: True
+
+----- Onebitdatasize=3_messages_can_be_overtaken.gm -----
+Time[ SB]: 31.043102741241455 = 31.02148675918579 + 0.021615982055664062
+Time[NSB]: 5.001700162887573
+Equiv: True
+
+----- Onebitdatasize=3_messages_read_are_inevitably_sent.gm -----
+Time[ SB]: 413.7422525882721 = 413.72144317626953 + 0.020809412002563477
+Time[NSB]: 405.16454815864563
+Equiv: True
+
+----- Onebitdatasize=3_no_generation_of_messages.gm -----
+Time[ SB]: 25.544962406158447 = 25.526890754699707 + 0.018071651458740234
+Time[NSB]: 0.14259076118469238
+Equiv: True
+
+----- Onebitdatasize=3_no_spontaneous_messages.gm -----
+Time[ SB]: 62.3834273815155 = 62.34917950630188 + 0.03424787521362305
+Time[NSB]: 0.3918449878692627
+Equiv: True
+
+----- Onebitdatasize=3_nodeadlock.gm -----
+Time[ SB]: 14.995282411575317 = 14.969413042068481 + 0.025869369506835938
+Time[NSB]: 0.12890315055847168
+Equiv: True
+
+----- Onebitdatasize=3_read_then_eventually_send.gm -----
+Time[ SB]: 469.2568390369415 = 469.2237386703491 + 0.03310036659240723
+Time[NSB]: 483.7752501964569
+Equiv: True
+
+----- Pardatasize=2_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.10704183578491211 = 0.0882577896118164 + 0.018784046173095703
+Time[NSB]: 0.10949134826660156
+Equiv: True
+
+----- Pardatasize=2_infinitely_often_read_write.gm -----
+Time[ SB]: 0.007584095001220703 = 0.005968332290649414 + 0.001615762710571289
+Time[NSB]: 0.0020678043365478516
+Equiv: True
+
+----- Pardatasize=2_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.0029153823852539062 = 0.0028972625732421875 + 1.811981201171875e-05
+Time[NSB]: 0.0005092620849609375
+Equiv: True
+
+----- Pardatasize=2_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.009768247604370117 = 0.009742021560668945 + 2.6226043701171875e-05
+Time[NSB]: 0.0011653900146484375
+Equiv: True
+
+----- Pardatasize=2_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.006101369857788086 = 0.006072282791137695 + 2.9087066650390625e-05
+Time[NSB]: 0.0064127445220947266
+Equiv: True
+
+----- Pardatasize=2_no_duplication_of_messages.gm -----
+Time[ SB]: 0.00821995735168457 = 0.00818943977355957 + 3.0517578125e-05
+Time[NSB]: 0.0001685619354248047
+Equiv: True
+
+----- Pardatasize=2_no_generation_of_messages.gm -----
+Time[ SB]: 0.005445718765258789 = 0.0053195953369140625 + 0.00012612342834472656
+Time[NSB]: 0.0003006458282470703
+Equiv: True
+
+----- Pardatasize=2_nodeadlock.gm -----
+Time[ SB]: 0.004805088043212891 = 0.0047681331634521484 + 3.695487976074219e-05
+Time[NSB]: 0.00017023086547851562
+Equiv: True
+
+----- Pardatasize=2_read_then_eventually_send.gm -----
+Time[ SB]: 0.00729823112487793 = 0.007238864898681641 + 5.936622619628906e-05
+Time[NSB]: 0.00848698616027832
+Equiv: True
+
+----- Pardatasize=4_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.1265249252319336 = 0.12647509574890137 + 4.982948303222656e-05
+Time[NSB]: 0.04810929298400879
+Equiv: True
+
+----- Pardatasize=4_infinitely_often_read_write.gm -----
+Time[ SB]: 0.017781972885131836 = 0.011803150177001953 + 0.005978822708129883
+Time[NSB]: 0.004524707794189453
+Equiv: True
+
+----- Pardatasize=4_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.00950765609741211 = 0.009477615356445312 + 3.0040740966796875e-05
+Time[NSB]: 0.0011594295501708984
+Equiv: True
+
+----- Pardatasize=4_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.06673693656921387 = 0.06668329238891602 + 5.364418029785156e-05
+Time[NSB]: 0.00884389877319336
+Equiv: True
+
+----- Pardatasize=4_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.01894974708557129 = 0.018906831741333008 + 4.291534423828125e-05
+Time[NSB]: 0.011566638946533203
+Equiv: True
+
+----- Pardatasize=4_no_duplication_of_messages.gm -----
+Time[ SB]: 0.027274608612060547 = 0.02720332145690918 + 7.128715515136719e-05
+Time[NSB]: 0.0004048347473144531
+Equiv: True
+
+----- Pardatasize=4_no_generation_of_messages.gm -----
+Time[ SB]: 0.02762746810913086 = 0.027586936950683594 + 4.0531158447265625e-05
+Time[NSB]: 0.0003032684326171875
+Equiv: True
+
+----- Pardatasize=4_nodeadlock.gm -----
+Time[ SB]: 0.009410858154296875 = 0.009369611740112305 + 4.124641418457031e-05
+Time[NSB]: 0.0002493858337402344
+Equiv: True
+
+----- Pardatasize=4_read_then_eventually_send.gm -----
+Time[ SB]: 0.035309791564941406 = 0.0352630615234375 + 4.673004150390625e-05
+Time[NSB]: 0.028988122940063477
+Equiv: True
+
+----- Pardatasize=8_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.5805726051330566 = 0.5804212093353271 + 0.0001513957977294922
+Time[NSB]: 0.1985912322998047
+Equiv: True
+
+----- Pardatasize=8_infinitely_often_read_write.gm -----
+Time[ SB]: 0.06794953346252441 = 0.05704021453857422 + 0.010909318923950195
+Time[NSB]: 0.014043092727661133
+Equiv: True
+
+----- Pardatasize=8_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.022280216217041016 = 0.022064685821533203 + 0.0002155303955078125
+Time[NSB]: 0.0030260086059570312
+Equiv: True
+
+----- Pardatasize=8_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.13562750816345215 = 0.13555479049682617 + 7.271766662597656e-05
+Time[NSB]: 0.023123502731323242
+Equiv: True
+
+----- Pardatasize=8_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.05874490737915039 = 0.05863809585571289 + 0.0001068115234375
+Time[NSB]: 0.016342639923095703
+Equiv: True
+
+----- Pardatasize=8_no_duplication_of_messages.gm -----
+Time[ SB]: 0.10111236572265625 = 0.10104990005493164 + 6.246566772460938e-05
+Time[NSB]: 0.0015180110931396484
+Equiv: True
+
+----- Pardatasize=8_no_generation_of_messages.gm -----
+Time[ SB]: 0.08135581016540527 = 0.0812673568725586 + 8.845329284667969e-05
+Time[NSB]: 0.0012707710266113281
+Equiv: True
+
+----- Pardatasize=8_nodeadlock.gm -----
+Time[ SB]: 0.01021265983581543 = 0.01016688346862793 + 4.57763671875e-05
+Time[NSB]: 0.00025153160095214844
+Equiv: True
+
+----- Pardatasize=8_read_then_eventually_send.gm -----
+Time[ SB]: 0.10791492462158203 = 0.10785961151123047 + 5.53131103515625e-05
+Time[NSB]: 0.07543373107910156
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 0.7536497116088867 = 0.7535614967346191 + 8.821487426757812e-05
+Time[NSB]: 0.20078516006469727
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_infinitely_often_lost.gm -----
+Time[ SB]: 0.19538450241088867 = 0.19532513618469238 + 5.936622619628906e-05
+Time[NSB]: 0.16687417030334473
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_infinitely_often_read_write.gm -----
+Time[ SB]: 0.11623597145080566 = 0.08905696868896484 + 0.02717900276184082
+Time[NSB]: 0.03728747367858887
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.10080718994140625 = 0.1007695198059082 + 3.7670135498046875e-05
+Time[NSB]: 0.03315901756286621
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 0.19147324562072754 = 0.19143414497375488 + 3.910064697265625e-05
+Time[NSB]: 0.05139589309692383
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.059808969497680664 = 0.0597381591796875 + 7.081031799316406e-05
+Time[NSB]: 0.02535557746887207
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_no_duplication_of_messages.gm -----
+Time[ SB]: 0.1278820037841797 = 0.12784099578857422 + 4.100799560546875e-05
+Time[NSB]: 0.0861654281616211
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_no_generation_of_messages.gm -----
+Time[ SB]: 0.010974645614624023 = 0.010889291763305664 + 8.535385131835938e-05
+Time[NSB]: 0.0002791881561279297
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_nodeadlock.gm -----
+Time[ SB]: 0.030606508255004883 = 0.03053426742553711 + 7.224082946777344e-05
+Time[NSB]: 0.0004913806915283203
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_read_then_eventually_send.gm -----
+Time[ SB]: 0.12993240356445312 = 0.1298966407775879 + 3.5762786865234375e-05
+Time[NSB]: 0.06685948371887207
+Equiv: True
+
+----- SWPdatasize=2_windowsize=1_read_then_eventually_send_if_fair.gm -----
+Time[ SB]: 0.056618452072143555 = 0.0565037727355957 + 0.00011467933654785156
+Time[NSB]: 0.007342815399169922
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 22.14403486251831 = 22.14263129234314 + 0.0014035701751708984
+Time[NSB]: 7.746623754501343
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_infinitely_often_lost.gm -----
+Time[ SB]: 8.31615948677063 = 8.314701557159424 + 0.0014579296112060547
+Time[NSB]: 7.120567321777344
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_infinitely_often_read_write.gm -----
+Time[ SB]: 4.88262414932251 = 3.235597848892212 + 1.6470263004302979
+Time[NSB]: 1.6992759704589844
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_infinitely_often_receive_d1.gm -----
+Time[ SB]: 2.384580373764038 = 2.384094476699829 + 0.0004858970642089844
+Time[NSB]: 0.6194841861724854
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 5.027263402938843 = 5.026526212692261 + 0.0007371902465820312
+Time[NSB]: 1.2380306720733643
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 1.5445878505706787 = 1.5435421466827393 + 0.0010457038879394531
+Time[NSB]: 0.7862548828125
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_no_duplication_of_messages.gm -----
+Time[ SB]: 88.98068857192993 = 88.97900414466858 + 0.001684427261352539
+Time[NSB]: 84.42270922660828
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_no_generation_of_messages.gm -----
+Time[ SB]: 0.26303863525390625 = 0.2620687484741211 + 0.0009698867797851562
+Time[NSB]: 0.0047109127044677734
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_nodeadlock.gm -----
+Time[ SB]: 0.7673377990722656 = 0.7671222686767578 + 0.0002155303955078125
+Time[NSB]: 0.004651069641113281
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_read_then_eventually_send.gm -----
+Time[ SB]: 3.8254075050354004 = 3.8242709636688232 + 0.0011365413665771484
+Time[NSB]: 2.8064517974853516
+Equiv: True
+
+----- SWPdatasize=2_windowsize=2_read_then_eventually_send_if_fair.gm -----
+Time[ SB]: 2.7083160877227783 = 2.7073473930358887 + 0.0009686946868896484
+Time[NSB]: 0.8206424713134766
+Equiv: True
+
+----- SWPdatasize=2_windowsize=3_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 357.464067697525 = 357.43712425231934 + 0.026943445205688477
+Time[NSB]: 113.01759743690491
+Equiv: True
+
+----- SWPdatasize=2_windowsize=3_infinitely_often_lost.gm -----
+Time[ SB]: 159.2698667049408 = 159.23435926437378 + 0.0355074405670166
+Time[NSB]: 162.94487190246582
+Equiv: True
+
+----- SWPdatasize=2_windowsize=3_infinitely_often_read_write.gm -----
+Time[ SB]: 127.49190068244934 = 81.51268792152405 + 45.97921276092529
+Time[NSB]: 52.52337718009949
+Equiv: True
+
+----- SWPdatasize=2_windowsize=3_infinitely_often_receive_d1.gm -----
+Time[ SB]: 45.54784846305847 = 45.537633419036865 + 0.010215044021606445
+Time[NSB]: 10.018519163131714
+Equiv: True
+
+----- SWPdatasize=2_windowsize=3_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 97.00044298171997 = 96.98631882667542 + 0.014124155044555664
+Time[NSB]: 23.119361639022827
+Equiv: True
+
+----- SWPdatasize=2_windowsize=3_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 24.784714698791504 = 24.765786170959473 + 0.01892852783203125
+Time[NSB]: 12.448442459106445
+Equiv: True
+
+----- SWPdatasize=2_windowsize=3_no_generation_of_messages.gm -----
+Time[ SB]: 0.5812880992889404 = 0.5739691257476807 + 0.007318973541259766
+Time[NSB]: 0.05187058448791504
+Equiv: True
+
+----- SWPdatasize=2_windowsize=3_nodeadlock.gm -----
+Time[ SB]: 9.070477485656738 = 9.066566228866577 + 0.003911256790161133
+Time[NSB]: 0.11178851127624512
+Equiv: True
+
+----- SWPdatasize=2_windowsize=3_read_then_eventually_send.gm -----
+Time[ SB]: 50.7182879447937 = 50.7004919052124 + 0.017796039581298828
+Time[NSB]: 36.57617735862732
+Equiv: True
+
+----- SWPdatasize=2_windowsize=3_read_then_eventually_send_if_fair.gm -----
+Time[ SB]: 188.77846837043762 = 188.7582802772522 + 0.020188093185424805
+Time[NSB]: 118.25550031661987
+Equiv: True
+
+----- SWPdatasize=2_windowsize=4_infinitely_often_receive_d1.gm -----
+Time[ SB]: 642.9548170566559 = 642.8379967212677 + 0.1168203353881836
+Time[NSB]: 131.2180142402649
+Equiv: True
+
+----- SWPdatasize=2_windowsize=4_no_generation_of_messages.gm -----
+Time[ SB]: 2.9637389183044434 = 2.9233384132385254 + 0.04040050506591797
+Time[NSB]: 0.49330949783325195
+Equiv: True
+
+----- SWPdatasize=2_windowsize=4_nodeadlock.gm -----
+Time[ SB]: 112.6731824874878 = 112.61106657981873 + 0.06211590766906738
+Time[NSB]: 0.7194492816925049
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_infinitely_often_enabled_then_infinitely_often_taken.gm -----
+Time[ SB]: 5.417135238647461 = 5.384133577346802 + 0.03300166130065918
+Time[NSB]: 1.5327706336975098
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_infinitely_often_lost.gm -----
+Time[ SB]: 1.1141808032989502 = 1.1139001846313477 + 0.00028061866760253906
+Time[NSB]: 1.0331966876983643
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_infinitely_often_read_write.gm -----
+Time[ SB]: 0.37059950828552246 = 0.2619950771331787 + 0.10860443115234375
+Time[NSB]: 0.16844439506530762
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_infinitely_often_receive_d1.gm -----
+Time[ SB]: 0.2861311435699463 = 0.28606605529785156 + 6.508827209472656e-05
+Time[NSB]: 0.07749557495117188
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 1.046105146408081 = 1.0460031032562256 + 0.00010204315185546875
+Time[NSB]: 0.3529329299926758
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 0.11037921905517578 = 0.11028623580932617 + 9.298324584960938e-05
+Time[NSB]: 0.06985092163085938
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_no_duplication_of_messages.gm -----
+Time[ SB]: 0.6273238658905029 = 0.6271960735321045 + 0.0001277923583984375
+Time[NSB]: 0.40421152114868164
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_no_generation_of_messages.gm -----
+Time[ SB]: 0.11094403266906738 = 0.11082124710083008 + 0.0001227855682373047
+Time[NSB]: 0.001430511474609375
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_nodeadlock.gm -----
+Time[ SB]: 0.05542445182800293 = 0.05536317825317383 + 6.127357482910156e-05
+Time[NSB]: 0.0005202293395996094
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_read_then_eventually_send.gm -----
+Time[ SB]: 0.5365302562713623 = 0.5364089012145996 + 0.00012135505676269531
+Time[NSB]: 0.38173651695251465
+Equiv: True
+
+----- SWPdatasize=4_windowsize=1_read_then_eventually_send_if_fair.gm -----
+Time[ SB]: 0.10609602928161621 = 0.10600924491882324 + 8.678436279296875e-05
+Time[NSB]: 0.02554917335510254
+Equiv: True
+
+----- SWPdatasize=4_windowsize=2_infinitely_often_lost.gm -----
+Time[ SB]: 198.3498032093048 = 198.33402371406555 + 0.015779495239257812
+Time[NSB]: 186.18858885765076
+Equiv: True
+
+----- SWPdatasize=4_windowsize=2_infinitely_often_read_write.gm -----
+Time[ SB]: 69.05799126625061 = 43.293774127960205 + 25.764217138290405
+Time[NSB]: 31.118911027908325
+Equiv: True
+
+----- SWPdatasize=4_windowsize=2_infinitely_often_receive_d1.gm -----
+Time[ SB]: 38.08425521850586 = 38.07417345046997 + 0.010081768035888672
+Time[NSB]: 10.540162324905396
+Equiv: True
+
+----- SWPdatasize=4_windowsize=2_infinitely_often_receive_for_all_d.gm -----
+Time[ SB]: 146.59981870651245 = 146.58627009391785 + 0.013548612594604492
+Time[NSB]: 41.51210856437683
+Equiv: True
+
+----- SWPdatasize=4_windowsize=2_invariantly_infinitely_many_reachable_taus.gm -----
+Time[ SB]: 15.825070858001709 = 15.810614824295044 + 0.014456033706665039
+Time[NSB]: 8.649978876113892
+Equiv: True
+
+----- SWPdatasize=4_windowsize=2_no_generation_of_messages.gm -----
+Time[ SB]: 8.982242584228516 = 8.974499702453613 + 0.007742881774902344
+Time[NSB]: 0.06954193115234375
+Equiv: True
+
+----- SWPdatasize=4_windowsize=2_nodeadlock.gm -----
+Time[ SB]: 5.818477392196655 = 5.802693128585815 + 0.015784263610839844
+Time[NSB]: 0.11096525192260742
+Equiv: True
+
+----- SWPdatasize=4_windowsize=2_read_then_eventually_send.gm -----
+Time[ SB]: 77.56033754348755 = 77.5449059009552 + 0.015431642532348633
+Time[NSB]: 57.30885076522827
+Equiv: True
+
+----- SWPdatasize=4_windowsize=2_read_then_eventually_send_if_fair.gm -----
+Time[ SB]: 32.632309913635254 = 32.61624503135681 + 0.016064882278442383
+Time[NSB]: 11.04152226448059
+Equiv: True
+
+----- Snakewidth=4_height=4_black_has_winning_strategy.gm -----
+Time[ SB]: 0.1846921443939209 = 0.18083715438842773 + 0.003854990005493164
+Time[NSB]: 0.09314441680908203
+Equiv: True
+
+----- Snakewidth=4_height=4_white_has_winning_strategy.gm -----
+Time[ SB]: 0.15128755569458008 = 0.1511545181274414 + 0.00013303756713867188
+Time[NSB]: 0.10141301155090332
+Equiv: True
+
