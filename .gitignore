@@ -2,4 +2,5 @@
 
 !*.py
 !.gitignore
-
+!results-and-analysis.zip
+!README.md
