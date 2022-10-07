@@ -2,5 +2,5 @@
 
 !*.py
 !.gitignore
-!results-and-analysis.zip
+!results-and-analysis/*
 !README.md
