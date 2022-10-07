@@ -1,0 +1,5 @@
+Analysis of Files in directory randoms/results:
+
+Avg Time Ratio -- 1.6238311599257234
+Avg SB total -- 2.8685728023052217
+Avg ZRA total -- 1.6233227143287658

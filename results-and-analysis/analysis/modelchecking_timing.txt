@@ -1,0 +1,5 @@
+Analysis of Files in directory modelchecking/results:
+
+Avg Time Ratio -- 21.876930107271214
+Avg SB total -- 27.564478545622393
+Avg ZRA total -- 18.64691178408536

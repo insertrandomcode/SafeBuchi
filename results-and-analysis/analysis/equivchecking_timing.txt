@@ -1,0 +1,5 @@
+Analysis of Files in directory equivchecking/results:
+
+Avg Time Ratio -- 4.1916668989393004
+Avg SB total -- 23.94144648551941
+Avg ZRA total -- 13.392246085575648
