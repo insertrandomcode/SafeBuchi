@@ -52,7 +52,8 @@ def tangle_trap_underestimation(G: Game, debug=False, iter=0) -> Tuple[Set[int],
             return (G.nodes(), set([])) if player == 0 else (set([]), G.nodes())
 
         # Do the scc decomposition of the one player game
-        tangles = [scc for scc in tarjan_scc(one_player.exclude(losing)) if len(scc) > 1] # + [G.nodes().difference(losing)]
+        tangles = [scc for scc in tarjan_scc(one_player.exclude(losing)) if 
+            len(scc) > 1 or scc.issubset(G[next(iter(scc))].edges)]
         in_tangle, tangle_edges = get_tangle_accessories(G, tangles, player)
 
         if debug:
@@ -153,10 +154,6 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
     # NOTE: all tangle_labelled values should have len(tangle_edges[i]) > 0 and in front
     #       this does not affect anything when excluded as if it has no edges is losing for that player anyway
 
-
-    # encodes whether a label involves leaving a given tangle
-    leaving_tangle = {v: [False for i in range(len(tangles))] for v in G.nodes()}
-
     tangle_labelled = [tangle_edges[i].issubset(X) for i in range(len(tangles))]
 
     def best_label_successor(labels: List[Label], choosing: int) -> Label:
@@ -178,9 +175,6 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
             [Label(G[x].priority, player, x) for x in G[v].edges.intersection(X)], # by tangle attractor rules this works
             G[v].owner
         )
-        leaving_tangle[v] = [
-            i in in_tangle[v] and i not in in_tangle[labels[v].origin] for i in range(len(tangles)) 
-        ]
 
     labelled = set([v for v in G.nodes() if labels[v].value >= 0])
     tangle_labelled = [tangle_edges[i].issubset(labelled) for i in range(len(tangles))]
@@ -201,8 +195,6 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
         new_labels = {key: Label(-1, player, key) for key in G.nodes()}
 
         for v in G.nodes():
-            # TODO: early stopping is causing problems where a 1-j owned vertex is unable to select a better path for itself when it 
-            #   should -- instead of stopping this way stop in the more complicated way
 
             # if v is eligible to ignore -1's due to a tangle
             # NOTE: could be underestimate value if we select label that stays in Tangle
@@ -226,44 +218,16 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
                     )
             ]
 
-            # represents choosing specifically the 
-            # TODO: fix
-            # successors_labels_for_tangles = [
-            #     [
-            #         Label(
-            #             max(labels[s].value, G[s].priority) if (labels[s].value >= 0 or s in X) else -1, 
-            #             player, 
-            #             s
-            #         )
-            #         for s in G[v].edges if leaving_tangle[s][i]
-            #     ]
-            #     for i in in_tangle[v] if tangle_labelled[i]
-            # ]
-            # labels_for_tangle = [best_label_successor(successors_labels_for_tangle, G[v].owner)
-            #     for successors_labels_for_tangle in successors_labels_for_tangles]
-        
-            #NOTE: this allows stopping, and hence bounds the iterations into polynomial time
             new_labels[v] = best_label_successor(successor_labels, G[v].owner)
-            # chosen_label = best_label_successor(successor_labels, G[v].owner)
-            # chosen_tangle_leave_label = max(labels_for_tangle) if len(labels_for_tangle)>0 else Label(-1, player, chosen_label.origin)
-            # new_labels[v] = max(chosen_label, chosen_tangle_leave_label)
 
             updated_here = labels[v].value != new_labels[v].value
             updated |= updated_here
 
+            if not updated_here:
+                new_labels[v] = labels[v]
+
             if new_labels[v].value >= 0:
                 labelled.add(v)
-
-        # updating leaving tangle array
-        # TODO: prove correctness
-        # for v in G.nodes():
-        #     w = new_labels[v].origin
-
-        #     print(w, leaving_tangle.keys())
-
-        #     leaving_tangle[v] = [
-        #         i in in_tangle[v] and (leaving_tangle[w][i] if i in in_tangle[w] else True) for i in range(len(tangles))
-        #     ]
 
         labels = new_labels # note that we will never have a non-negative value become negative
         tangle_labelled = [tangle_edges[i].issubset(labelled) for i in range(len(tangles))]
