@@ -2,5 +2,7 @@
 
 !*.py
 !.gitignore
-!results-and-analysis/*
+# !results-and-analysis/*
 !README.md
+
+/trash/*

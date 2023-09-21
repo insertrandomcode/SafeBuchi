@@ -1,5 +1,0 @@
-Analysis of Files in directory mlsolver/results:
-
-Avg Time Ratio -- 1.7879382858081931
-Avg SB total -- 9.094131692035779
-Avg ZRA total -- 10.997335018338385
