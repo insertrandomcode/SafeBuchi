@@ -1,8 +1,19 @@
 /*
 
-!*.py
 !.gitignore
 # !results-and-analysis/*
 !README.md
 
-!/testing/*
+!/testing
+/testing/__pycache__/*
+
+!/base
+/base/__pycache__/*
+
+!/algorithms
+/algorithms/__pycache__/*
+
+!/preprocessing
+/preprocessing/__pycache__/*
+
+
