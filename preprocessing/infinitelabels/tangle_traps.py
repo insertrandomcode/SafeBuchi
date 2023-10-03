@@ -214,7 +214,7 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
                     for s in G[v].edges if not ( # stops 1-j from avoiding X by staying in a tangle
                         tangle_bool and
                         labels[s].value == -1 and
-                        any([s in tangles[i] for i in in_tangle[v]])
+                        any([s in tangles[i] and tangle_labelled[i] for i in in_tangle[v]])
                     )
             ]
 
