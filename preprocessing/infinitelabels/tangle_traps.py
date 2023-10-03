@@ -203,7 +203,7 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
             #       because labelling says we reach X earlier and then get stuck in X
             #   If we can encode whether we the label stays inside a tangle - we could pick the best label from successors not
             #       in the tangles. 
-            # tangle_bool = G[v].owner == 1-player and any([tangle_labelled[i] for i in in_tangle[v]])
+            tangle_bool = G[v].owner == 1-player and any([tangle_labelled[i] for i in in_tangle[v]])
 
             successor_labels = [
                     Label(
@@ -212,9 +212,9 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
                         s
                     ) 
                     for s in G[v].edges if not ( # stops 1-j from avoiding X by staying in a tangle
-                        G[v].owner == 1-player and
+                        tangle_bool and
                         labels[s].value == -1 and
-                        any([s in tangles[i] and tangle_labelled[i] for i in in_tangle[s]])
+                        any([s in tangles[i] and tangle_labelled[i] for i in in_tangle[v]])
                     )
             ]
 
