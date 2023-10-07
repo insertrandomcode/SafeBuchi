@@ -7,7 +7,7 @@ else: # annoying python relative import stuff
 
 from base.parity_game import Game
 from algorithms.zielonkas import attract
-from base.labelling import labelling_nostop
+from base.labelling import labelling
 from preprocessing.preprocessor import Preprocessor
 
 from typing import Set
@@ -26,7 +26,7 @@ def winning_core_underapproximation(G: Game) -> (Set[int], Set[int]):
         X = G.nodes()
 
         for i in range(len(G)):
-            labels = labelling_nostop(G, X, player)
+            labels = labelling(G, X, player)
 
             next_ = [x for x in X if labels[x].value>=0 and labels[x].value % 2 == player]
 

@@ -53,7 +53,7 @@ def tangle_trap_underestimation(G: Game, debug=False, iter=0) -> Tuple[Set[int],
 
         # Do the scc decomposition of the one player game
         tangles = [scc for scc in tarjan_scc(one_player.exclude(losing)) if 
-            len(scc) > 1 or scc.issubset(G[next(iter(scc))].edges)]
+            len(scc) > 1 or scc.issubset(G[list(scc)[0]].edges)]
         in_tangle, tangle_edges = get_tangle_accessories(G, tangles, player)
 
         if debug:
@@ -178,15 +178,18 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
 
     labelled = set([v for v in G.nodes() if labels[v].value >= 0])
     tangle_labelled = [tangle_edges[i].issubset(labelled) for i in range(len(tangles))]
-
+    
     updated = True
     i = 0
+
+    prev_verts_not_ignored_by_v = {v: len(G[v].edges) for v in G.nodes()}
+
     while updated:
-        # print(f'------------ {i} --------------')
-        # print(labels)
-        # print(tangle_labelled)
-        if i > len(G):
-            raise ValueError("Labels Took Longer than Theoretically Maximum")
+        print(f'------------ {i} --------------')
+        print(labels)
+        print(tangle_labelled)
+        # if i > len(G):
+        #     raise ValueError("Labels Took Longer than Theoretically Maximum")
 
         i += 1
         updated = False
@@ -204,6 +207,11 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
             #   If we can encode whether we the label stays inside a tangle - we could pick the best label from successors not
             #       in the tangles. 
             # tangle_bool = G[v].owner == 1-player and any([tangle_labelled[i] for i in in_tangle[v]])
+            vertices_not_ignored = [s for s in G[v].edges if not (
+                G[v].owner == 1-player and
+                labels[s].value == -1 and
+                any(tangle_labelled[i] for i in in_tangle[s])
+            )]
 
             successor_labels = [
                     Label(
@@ -211,14 +219,18 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
                         player, 
                         s
                     ) 
-                    for s in G[v].edges if not ( # stops 1-j from avoiding X by staying in a tangle
-                        G[v].owner == 1-player and
-                        labels[s].value == -1 and
-                        any([s in tangles[i] and tangle_labelled[i] for i in in_tangle[s]])
-                    )
+                    for s in vertices_not_ignored
             ]
 
-            new_labels[v] = best_label_successor(successor_labels, G[v].owner)
+            # The only time that the label could get worse is if we were ignoring a vertex, and now we're not.
+            #   i.e. if the number of vertices we are taking into account has not changed.
+
+            if G[v].owner == 1-player and vertices_not_ignored != prev_verts_not_ignored_by_v:
+                new_labels[v] = best_label_successor(successor_labels, G[v].owner)
+            else:
+                new_labels[v] = max(labels[v], best_label_successor(successor_labels, G[v].owner))
+
+            prev_verts_not_ignored_by_v[v] = vertices_not_ignored
 
             updated_here = labels[v].value != new_labels[v].value
             updated |= updated_here
