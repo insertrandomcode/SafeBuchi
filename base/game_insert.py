@@ -14,7 +14,7 @@ def insert_game_into_vertices(
     target_game: Game, 
     insert_game: Game, 
     target_vertices: Set[int],
-    qualifier: Callable[Game.Node, bool] = lambda x : True,
+    qualifier: Callable[[Game.Node], bool] = lambda x : True,
     seed: int = None
 ):
     assert target_game.nodes().issuperset(target_vertices), f"target vertices to replace ({target_vertices}) are not a subset of target game"

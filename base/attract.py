@@ -43,14 +43,39 @@ def safe_attract(G: Game, i: int, U: Set[int], inc_cond: "Callable[int, bool]") 
 
 def safe_attract_star(G: Game, i: int, U: Set[int], inc_cond: "Callable[int, bool]"):
     # vertices forcibly 1 step away
-    X = G.nodes(lambda x :
-            inc_cond(x) and ( 
-                (x.owner == i and len(x.edges.intersection(U)) > 0) or 
-                (x.owner == 1-i and x.edges.issubset(U))
-            )
-        )
+    # Need to be slightly more complicated - as later elements should be included if they can reach U not just reaching X
 
-    return safe_attract(G, i, X, inc_cond)
+    assert all(inc_cond(G[u]) for u in U), 'attract set U does not meet inclusion condition'
+
+    if len(U) == 0:
+        return U
+    
+    G_ = G.invert_edges()
+
+    attractor = set([])
+    attractor_and_u = set(U)
+    added = U
+
+    while len(added) != 0:
+        to_add = set([])
+
+        for node in added:
+
+            # for each incoming edge into the node
+            for edge in G_[node].edges:
+                # either can force because owner, or can force because only option
+                if inc_cond(G[edge]) and ( G_[edge].owner == i or G[edge].edges.issubset(attractor_and_u) ):
+                    to_add.add(edge)
+
+        attractor = attractor.union(to_add)
+        attractor_and_u = attractor_and_u.union(to_add)
+        added = to_add
+
+        #remove internal edges again
+        for node in to_add:
+            G_[node].edges = G_[node].edges.difference(attractor)
+                
+    return attractor
 
 def attract(G: Game, i: int, U: Set[int]):
     return safe_attract(G, i, U, lambda x : True)
