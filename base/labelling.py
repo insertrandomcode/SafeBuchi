@@ -85,12 +85,18 @@ def labelling(G: Game, X: Set[int], player:int, strategy: bool=False) -> dict:
         for v in G.nodes():
             successor_labels = [
                     Label(
-                        max(labels[s].value, G[s].priority) if (labels[s].value >= 0 or s in X) else -1, 
+                        max(labels[s].value, G[s].priority) if (labels[s].value >= 0) else -1, 
                         player, 
                         s
                     ) 
                     for s in G[v].edges
                 ]
+        
+            successor_labels = [
+                max(successor_labels[i], Label(G[successor_labels[i].origin].priority, player, successor_labels[i].origin))
+                    if successor_labels[i].origin in X else successor_labels[i]
+                for i in range(len(successor_labels))
+            ]
 
             new_labels[v] = max(labels[v], best_label_successor(successor_labels, G[v].owner))
 
