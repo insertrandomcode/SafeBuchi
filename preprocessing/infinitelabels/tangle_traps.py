@@ -41,20 +41,7 @@ def tangle_trap_underestimation(G: Game, debug=False, iter=0) -> Tuple[Set[int],
 
         _, strat = labelling(G, G.nodes(), player, True)
 
-        one_player = strategy_graph(G, strat, player)
-
-        # find looping vertices for opponent in 1 player game
-
-        losing = loop_vertices(one_player, 1-player)
-
-        # early exit to avoid costly tangle labelling
-        if len(losing) == 0:
-            return (G.nodes(), set([])) if player == 0 else (set([]), G.nodes())
-
-        # Do the scc decomposition of the one player game
-        tangles = [scc for scc in tarjan_scc(one_player.exclude(losing)) if 
-            len(scc) > 1 or scc.issubset(G[list(scc)[0]].edges)]
-        in_tangle, tangle_edges = get_tangle_accessories(G, tangles, player)
+        tangles, in_tangle, tangle_edges = get_tangles_from_strategy(G, strat, player)
 
         if debug:
             print(iter, 'tangles', tangles)
@@ -94,15 +81,38 @@ def tangle_trap_underestimation(G: Game, debug=False, iter=0) -> Tuple[Set[int],
 
             A = tangle_attract(G, X, player, tangles, in_tangle, tangle_edges)
 
-            if debug: print(player, X, labels)
-
-            G_ = G.exclude(A)
+            if debug: print(player, X)
 
             W0, W1 = tangle_trap_underestimation(G.exclude(A), debug=debug, iter=iter+1)
 
             return ( W0.union(A), W1 ) if player == 0 else ( W0, W1.union(A) )
     
     return set([]), set([])    
+
+def get_tangles_from_strategy(G, strat, player):
+
+    one_player = strategy_graph(G, strat, player)
+
+    # find looping vertices for opponent in 1 player game
+
+    losing = loop_vertices(one_player, 1-player)
+
+    # early exit to avoid costly tangle labelling
+    if len(losing) == 0:
+        tangles = [list(G.nodes())]
+        in_tangle, tangle_edges = get_tangle_accessories(G, tangles, player)
+        return tangles, in_tangle, tangle_edges
+
+
+    # Do the scc decomposition of the one player game
+    tangles = [scc for scc in tarjan_scc(one_player.exclude(losing)) if 
+        len(scc) > 1 or scc.issubset(one_player[list(scc)[0]].edges)]
+    
+    #TODO: add sub-tangle discovery
+
+    in_tangle, tangle_edges = get_tangle_accessories(G, tangles, player)
+
+    return tangles, in_tangle, tangle_edges
 
 def get_tangle_accessories(G, tangles, player):
     in_tangle = {v: [i for i in range(len(tangles)) if v in tangles[i]] for v in G.nodes()}
@@ -147,12 +157,13 @@ def tangle_attract(G, U, player, tangles, in_tangle, tangle_edges, give_updated 
                 
     return (attractor, attractor != U) if give_updated else attractor
 
-def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tangle_edges) -> dict:
+def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tangle_edges, strategy=False) -> dict:
     # Seems super duper slow when nontrivial tangles are introduced -- maybe go back to stop-labelling
 
-    # these tangles are all disjoint TODO: maybe modify this to work for overlapping tangles
     # NOTE: all tangle_labelled values should have len(tangle_edges[i]) > 0 and in front
     #       this does not affect anything when excluded as if it has no edges is losing for that player anyway
+
+    strat = {key: -1 for key in G.nodes(lambda x : x.owner == player)}
 
     tangle_labelled = [tangle_edges[i].issubset(X) for i in range(len(tangles))]
 
@@ -175,6 +186,8 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
             [Label(G[x].priority, player, x) for x in G[v].edges.intersection(X)], # by tangle attractor rules this works
             G[v].owner
         )
+        if G[v].owner == player and labels[v].value >= 0:
+            strat[v] = labels[v].origin
 
     labelled = set([v for v in G.nodes() if labels[v].value >= 0])
     tangle_labelled = [tangle_edges[i].issubset(labelled) for i in range(len(tangles))]
@@ -185,11 +198,9 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
     prev_verts_not_ignored_by_v = {v: len(G[v].edges) for v in G.nodes()}
 
     while updated:
-        print(f'------------ {i} --------------')
-        print(labels)
-        print(tangle_labelled)
-        # if i > len(G):
-        #     raise ValueError("Labels Took Longer than Theoretically Maximum")
+        # print(f'------------ {i} --------------')
+        # print(labels)
+        # print(tangle_labelled)
 
         i += 1
         updated = False
@@ -210,30 +221,43 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
             vertices_not_ignored = [s for s in G[v].edges if not (
                 G[v].owner == 1-player and
                 labels[s].value == -1 and
+                s not in X and
                 any(tangle_labelled[i] for i in in_tangle[s])
             )]
 
             successor_labels = [
                     Label(
-                        max(labels[s].value, G[s].priority) if (labels[s].value >= 0 or s in X) else -1, 
+                        max(labels[s].value, G[s].priority) if (labels[s].value >= 0) else -1, 
                         player, 
                         s
                     ) 
                     for s in vertices_not_ignored
             ]
 
+            # option for prefix ending at s if s in X -- think this eliminates the need for non-worsening
+            successor_labels = [
+                max(successor_labels[i], Label(G[successor_labels[i].origin].priority, player, successor_labels[i].origin))
+                    if successor_labels[i].origin in X else successor_labels[i]
+                for i in range(len(successor_labels))
+            ]
+
             # The only time that the label could get worse is if we were ignoring a vertex, and now we're not.
             #   i.e. if the number of vertices we are taking into account has not changed.
 
-            if G[v].owner == 1-player and vertices_not_ignored != prev_verts_not_ignored_by_v:
-                new_labels[v] = best_label_successor(successor_labels, G[v].owner)
-            else:
-                new_labels[v] = max(labels[v], best_label_successor(successor_labels, G[v].owner))
+            new_labels[v] = best_label_successor(successor_labels, G[v].owner)
+
+            # if G[v].owner == 1-player and vertices_not_ignored != prev_verts_not_ignored_by_v:
+            #     new_labels[v] = best_label_successor(successor_labels, G[v].owner)
+            # else:
+            #     new_labels[v] = max(labels[v], best_label_successor(successor_labels, G[v].owner))
 
             prev_verts_not_ignored_by_v[v] = vertices_not_ignored
 
             updated_here = labels[v].value != new_labels[v].value
             updated |= updated_here
+
+            if G[v].owner == player and updated_here:
+                strat[v] = new_labels[v].origin
 
             if not updated_here:
                 new_labels[v] = labels[v]
@@ -246,7 +270,8 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
 
         if not updated:
             break
-    return labels
+
+    return labels if not strategy else (labels, strat)
 
 def loop_vertices(G: Game, player: int):
 

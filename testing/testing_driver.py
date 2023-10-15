@@ -45,7 +45,7 @@ class Driver(ABC):
         f = open(input_file, 'r')
 
         _ = f.readline() # opening line
-        # _ = f.readline() # start location -- mlsolver only
+        _ = f.readline() # start location -- mlsolver only
 
         info, edges = [], []
 
@@ -60,8 +60,8 @@ class Driver(ABC):
             label = int(data[0])
             priority = int(data[1])
             owner = int(data[2])
-            destinations = [] if len(data) == 3 else list(map(int, ''.join(data[3:])[:-2].split(','))) # spaces
-            # destinations = [] if len(data) == 4 else list(map(int, data[3].split(','))) # no spaces
+            # destinations = [] if len(data) == 3 else list(map(int, ''.join(data[3:])[:-2].split(','))) # spaces
+            destinations = [] if len(data) == 3 else list(map(int, data[3][:-2].split(','))) # no spaces
 
             info.append( (label, (owner, priority)))
             for dest in destinations:

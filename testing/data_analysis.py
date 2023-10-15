@@ -16,9 +16,11 @@ def run_analysis(target: str, output: str):
         "time_to_preprocess": 0,
         "time_to_pre_solve": 0,
         "time_to_zielonkas": 0,
+        "total_errors": 0,
         "incorrect_preprocessing": [],
         "unsolved": [],
-        "solved": []
+        "solved": [],
+        "errors": []
     }
 
     for filename in filenames:
@@ -28,6 +30,8 @@ def run_analysis(target: str, output: str):
         f.close()
 
         if file_json["error"] != None:
+            analysis_json["errors"].append((filename, file_json['error']))
+            analysis_json["total_errors"] += 1
             continue
 
         analysis_json["total_files"] += 1

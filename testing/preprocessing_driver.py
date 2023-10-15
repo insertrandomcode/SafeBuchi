@@ -92,7 +92,8 @@ if __name__ == '__main__':
     from preprocessing.safebuchi_preprocessing import SafeBuchiPreprocessor
 
     ## Change Preprocessor Here
-    T = PreprocessingDriver(SequentialPreprocessor([SafeBuchiPreprocessor(), WinningCorePreprocessor()]))
+    T = PreprocessingDriver(SafeBuchiPreprocessor())
+    #  = PreprocessingDriver(SequentialPreprocessor([SafeBuchiPreprocessor(), WinningCorePreprocessor()]))
     
     filelist = T.filelist(test_dir)
 
