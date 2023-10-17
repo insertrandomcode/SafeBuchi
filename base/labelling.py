@@ -77,12 +77,20 @@ def labelling(G: Game, X: Set[int], player:int, strategy: bool=False) -> dict:
             strat[v] = labels[v].origin
 
     updated = True
+    check_from = list( can_reach.union(X) ) # list just for consistency here
     while updated:
         updated = False
         # having staggered updates makes the proof of correctness easier
         new_labels = {key: Label(-1, player, key) for key in G.nodes()}
 
-        for v in G.nodes():
+        # only look at vertices that might actually update
+        to_check = set([])
+        for v in check_from:
+            to_check = to_check.union(G_[v].edges)
+
+        check_from = []
+
+        for v in to_check:
             successor_labels = [
                     Label(
                         max(labels[s].value, G[s].priority) if (labels[s].value >= 0) else -1, 
@@ -103,8 +111,11 @@ def labelling(G: Game, X: Set[int], player:int, strategy: bool=False) -> dict:
             updated_here = labels[v].value != new_labels[v].value
             updated |= updated_here
 
-            if G[v].owner == player and updated_here:
-                strat[v] == new_labels[v].origin
+            if updated_here:
+                check_from.append(v)
+
+                if G[v].owner == player:
+                    strat[v] == new_labels[v].origin
         
         labels = new_labels # note that we will never have a non-negative value become negative
 

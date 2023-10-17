@@ -197,6 +197,8 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
 
     prev_verts_not_ignored_by_v = {v: len(G[v].edges) for v in G.nodes()}
 
+    check_from = can_reach.union(X)
+
     while updated:
         # print(f'------------ {i} --------------')
         # print(labels)
@@ -208,7 +210,13 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
         # having staggered updates makes the proof of correctness easier
         new_labels = {key: Label(-1, player, key) for key in G.nodes()}
 
-        for v in G.nodes():
+        to_check = set([])
+        for v in check_from:
+            to_check = to_check.union(G_[v].edges)
+        
+        check_from = []
+
+        for v in to_check:
 
             # if v is eligible to ignore -1's due to a tangle
             # NOTE: could be underestimate value if we select label that stays in Tangle
@@ -256,13 +264,13 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
             updated_here = labels[v].value != new_labels[v].value
             updated |= updated_here
 
-            if G[v].owner == player and updated_here:
-                strat[v] = new_labels[v].origin
+            if updated_here:
+                check_from.append(v)
 
-            if not updated_here:
-                new_labels[v] = labels[v]
+                if G[v].owner == player:
+                    strat[v] = new_labels[v].origin
 
-            if new_labels[v].value >= 0:
+            if labels[v].value < 0 and new_labels[v].value >= 0:
                 labelled.add(v)
 
         labels = new_labels # note that we will never have a non-negative value become negative
