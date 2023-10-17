@@ -26,6 +26,7 @@ def run_comparison(target1: str, target2: str, output: str):
     
     analysis_json["l-error"] = []
     analysis_json["r-error"] = []
+    analysis_json['both-error'] = []
 
     targets = [target1, target2]
 
@@ -53,10 +54,12 @@ def run_comparison(target1: str, target2: str, output: str):
                 freason[i] = fjson[i]["error"]
 
         if not all(fexists):
-            for i, key in enumerate(['l-error','r-error']):
-                if not fexists[i]:
-                    analysis_json[key].append( (filename, freason[i]) )
-            
+            if any(fexists):
+                for i, key in enumerate(['l-error','r-error']):
+                    if not fexists[i]:
+                        analysis_json[key].append( (filename, freason[i]) )
+            else:
+                analysis_json['both-error'].append((filename, freason[0], freason[1]))
             continue
                     
         # Ugly but it works

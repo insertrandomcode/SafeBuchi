@@ -11,16 +11,17 @@ def run_analysis(target: str, output: str):
     # report on - total completely solved - avg solve %
     analysis_json = {
         "total_solved": 0,
+        "total_unsolved": 0,
+        "total_timeouts": 0,
         "total_files": 0,
         "solved_files_percentage": 0.0,
         "time_to_preprocess": 0,
         "time_to_pre_solve": 0,
         "time_to_zielonkas": 0,
-        "total_errors": 0,
         "incorrect_preprocessing": [],
         "unsolved": [],
         "solved": [],
-        "errors": []
+        "timedout": []
     }
 
     for filename in filenames:
@@ -29,13 +30,18 @@ def run_analysis(target: str, output: str):
         file_json = json.load(f)
         f.close()
 
+        
+
         if file_json["error"] != None:
-            analysis_json["errors"].append((filename, file_json['error']))
-            analysis_json["total_errors"] += 1
+            if file_json["error"] == "Time Out Preprocessing in 10 minutes\n":
+                analysis_json["total_files"] += 1
+                analysis_json["timedout"].append(file_json["test_name"])
+                analysis_json["total_timeouts"] += 1
             continue
 
         analysis_json["total_files"] += 1
         analysis_json["total_solved"] += file_json["solved"]
+        analysis_json["total_unsolved"] += not file_json["solved"]
         analysis_json["time_to_preprocess"] += file_json["preprocessing_time"]
         analysis_json["time_to_pre_solve"] += file_json["pre_and_postprocessing_time"]
         analysis_json["time_to_zielonkas"] += file_json["zielonkas_time"]
