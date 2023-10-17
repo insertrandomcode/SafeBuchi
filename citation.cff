@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: pre-target tangle avoidance algorithm
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Stuckey de la Banda
+    family-names: Alejandro
+    email: astu0006@student.monash.edu
+repository-code: >-
+  https://github.com/insertrandomcode/SafeBuchi
+license: Apache-2.0
