@@ -208,7 +208,7 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
         updated = False
 
         # having staggered updates makes the proof of correctness easier
-        new_labels = {key: Label(-1, player, key) for key in G.nodes()}
+        new_labels = dict(labels)
 
         to_check = set([])
         for v in check_from:

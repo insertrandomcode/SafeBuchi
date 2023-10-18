@@ -77,11 +77,12 @@ def labelling(G: Game, X: Set[int], player:int, strategy: bool=False) -> dict:
             strat[v] = labels[v].origin
 
     updated = True
-    check_from = list( can_reach.union(X) ) # list just for consistency here
+    check_from = list( can_reach ) # list just for consistency here
+
     while updated:
         updated = False
         # having staggered updates makes the proof of correctness easier
-        new_labels = {key: Label(-1, player, key) for key in G.nodes()}
+        new_labels = dict(labels) # deepcopys
 
         # only look at vertices that might actually update
         to_check = set([])
