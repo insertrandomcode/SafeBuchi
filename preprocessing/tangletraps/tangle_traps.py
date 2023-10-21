@@ -191,13 +191,17 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
 
     labelled = set([v for v in G.nodes() if labels[v].value >= 0])
     tangle_labelled = [tangle_edges[i].issubset(labelled) for i in range(len(tangles))]
-    
+
     updated = True
     i = 0
 
     prev_verts_not_ignored_by_v = {v: len(G[v].edges) for v in G.nodes()}
 
-    check_from = can_reach.union(X)
+    check_from = can_reach
+
+    for i, t in enumerate(tangles):
+        if tangle_labelled[i]:
+            check_from = check_from.union(t)
 
     while updated:
         # print(f'------------ {i} --------------')
@@ -210,11 +214,16 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
         # having staggered updates makes the proof of correctness easier
         new_labels = dict(labels)
 
+        # This backcheck version seems actually slower than naively checking every vertex on modelchecking and equivchecking
+        #   I suspect this is because on these, for sufficiently large X (as on the first few iterations)
+        #   the algorithm needs to check all verrtices anywway and so we spend time building these sets of vertices to check
+        #   and don't gain any time from skipping vertices
+        # It's better on mlsolver however.
         to_check = set([])
         for v in check_from:
             to_check = to_check.union(G_[v].edges)
         
-        check_from = []
+        check_from = set([])
 
         for v in to_check:
 
@@ -265,7 +274,7 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
             updated |= updated_here
 
             if updated_here:
-                check_from.append(v)
+                check_from.add(v)
 
                 if G[v].owner == player:
                     strat[v] = new_labels[v].origin
@@ -274,7 +283,14 @@ def tangle_labelling(G: Game, X: Set[int], player: int, tangles, in_tangle, tang
                 labelled.add(v)
 
         labels = new_labels # note that we will never have a non-negative value become negative
-        tangle_labelled = [tangle_edges[i].issubset(labelled) for i in range(len(tangles))]
+        tangle_labelled_ = [True if tangle_labelled[i] else tangle_edges[i].issubset(labelled) for i in range(len(tangles))]
+
+        # the first time a vertex becomes part of a labelled tangle, we also need to check incoming vertices to it.
+        for i,t in enumerate(tangles):
+            if (not tangle_labelled[i]) and tangle_labelled_[i]:
+                check_from = check_from.union(t)
+        
+        tangle_labelled = tangle_labelled_
 
         if not updated:
             break

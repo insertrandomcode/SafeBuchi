@@ -13,7 +13,7 @@ from preprocessing.preprocessor import Preprocessor
 
 from typing import Tuple, Set
 
-class SafeBuchiPreprocessor(Preprocessor):
+class FatalAttractorPreprocessor(Preprocessor):
 
     def preprocess(self, G: Game) -> Tuple[Game, Tuple[Set[int], Set[int]]]:
         partition = fatal_attractor_preprocessor(G, player=None)

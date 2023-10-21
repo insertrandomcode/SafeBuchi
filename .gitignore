@@ -16,7 +16,7 @@
 
 !/preprocessing
 /preprocessing/__pycache__/*
-/preprocessing/infinitelabels/__pycache__/*
+/preprocessing/tangletraps/__pycache__/*
 /preprocessing/layeredmazes/__pycache__/*
 /preprocessing/strategyfinding/__pycache__/*
 /preprocessing/trapfinding/__pycache__/*
