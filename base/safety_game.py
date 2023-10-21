@@ -7,6 +7,7 @@ else: # annoying python relative import stuff
 
 from base.parity_game import Game
 from base.safe_buchi import safe_buchi_game
+from typing import Set
 
 def safety_game(G: Game, target_set: Set[int], exclude_set: Set[int], player: int) -> Game:
     # assert max_priority >= player, "max prio less than player -- if this is a problem look into it"

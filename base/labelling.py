@@ -6,10 +6,9 @@ else: # annoying python relative import stuff
     sys.path.insert(0, '..')
 
 from base.parity_game import Game
-from base.attract import attract_star
 
 from functools import total_ordering
-from typing import Set, List, Tuple
+from typing import Set, List
 
 @total_ordering
 class Label():
@@ -82,7 +81,7 @@ def labelling(G: Game, X: Set[int], player:int, strategy: bool=False) -> dict:
     while updated:
         updated = False
         # having staggered updates makes the proof of correctness easier
-        new_labels = dict(labels) # deepcopys
+        new_labels = {v: labels[v] for v in G.nodes()} # deepcopy
 
         # only look at vertices that might actually update
         to_check = set([])

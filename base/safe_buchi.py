@@ -5,8 +5,7 @@ if __name__ == '__main__':
 else: # annoying python relative import stuff
     sys.path.insert(0, '..')
 
-import numpy as np
-from typing import Set, Tuple
+from typing import Set
 from base.parity_game import Game
 
 def safe_buchi_game(target_set: Set[int], exclude_set: Set[int], player: int, game: Game) -> Game:

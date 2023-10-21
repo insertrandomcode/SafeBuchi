@@ -5,9 +5,7 @@ if __name__ == '__main__':
 else: # annoying python relative import stuff
     sys.path.insert(0, '..')
 
-import numpy as np
-
-from typing import Set, Tuple, List, Callable
+from typing import Set, List, Callable
 from base.parity_game import Game
 
 def insert_game_into_vertices(

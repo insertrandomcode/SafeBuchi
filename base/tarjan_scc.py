@@ -5,8 +5,7 @@ if __name__ == '__main__':
 else: # annoying python relative import stuff
     sys.path.insert(0, '..')
 
-from typing import Tuple, Set, List
-import numpy as np
+from typing import Set, List
 from base.parity_game import Game
 from preprocessing.strategyfinding.strategy_finding import WGraph
 

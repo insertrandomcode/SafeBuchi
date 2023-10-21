@@ -5,8 +5,7 @@ if __name__ == '__main__':
 else: # annoying python relative import stuff
     sys.path.insert(0, '..')
 
-from typing import Set, Tuple, List
-import numpy as np
+from typing import Set, Tuple
 import pydot
 
 class Game:
