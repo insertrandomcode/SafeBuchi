@@ -1,23 +1,36 @@
-### Supplamental GitHub to a report for FIT3144
+## Supplamental GitHub to thesis for FIT4444
 
-## Understanding the Code
+### Understanding the Code
 
+#### Basics of Parity Games
 `parity_game.py` implements the `Game` class that takes in a pair of lists as input: a list of vertices with their label and info (owner, priority) in tuple pairs and a list of all directed edges. It implements some useful methods such as exclude, invert_edges, nodes (a filter), and visuale. The visualise method utilises the pydot library that you may need to install.
 
-`zielonkas.py` is a standard implementation of zielonkas recursive algorithm and the 'improved' attractor set calculation. `safe_buchi.py` creates a safe_buchi game from a game, target set and exclusion set. It uses the old model that includes all vertices but makes exclusion set have no outgoing edges but to 'lose', this is functionally identical to the updated version in the paper.
+`attract.py` implementes the various forms of the attractor calculation, including star and safe variants. 
 
-`safebuchi_preprocessing.py` is an implementation of the algorithm of the same name in the report, almost line for line. `multi_safebuchi.py` is an implementation of the version of the generalised safebuchi preprocessing with the 4 listed properties. We see here how we test the final property in polynomial time using a DP-like approach to remember.
+`zielonkas.py` is a standard implementation of zielonkas recursive algorithm and the improved attractor set calculation.
 
-Each '``driver`' function is what is used to run the final tests and the `analysis` functions read .res files created by the driver functions to aggregate data. If I'm being honest these 4 functions are very slap dash but they do what they need to. Note that the driver functions utilise linux to handle the timeouts and have not been tested on other operating systems.
+#### Preprocessing
 
-## Understanding the Results
+`fatalattractor_preprocessing.py` contains the `FatalAttractorPreprocessor` that contains implements the fatal attractor calculations developed by Huth et al. as `fatal_attractor_underestimator`. It also contan the `safe_buchi_underestimator` that makes the same calculation with a slower method.
 
-The zip file contains 6 folders. The analysis folder contains plaintext files containing the aggregate analysis data - understanding it is relatively straight-forward. Each results folder (including those within the randoms directories) contains a `_filenames.txt` which is used by the analysis functions and can be mostly ignored, a `_timing.txt` that contains timing info for each game, and the individual .res files for every game.
+`WinningCorePreprocessor` implemented in `winnincores/winning_core_underestimation.py` is an implementation of the winning core under-approximator from Vester. 
 
-A .res file lists first the total number of vertices in the game, then number of vertices not solved. Then it lists the partition that was found and below that a printout of the remaining game in the same format as the .gm files.
+In the `tangletraps` directory the file `tangletraps/tangle_traps.py` implements the pre-target tangle avoidance algorithm. This includes an implementation of tangle labelling, and the tangle underestimation techniques used.
 
-## Running Benchmarks Yourself
+#### Testing
 
-If you wish to run the tests yourself download the benchmarks by going to https://github.com/jkeiren/paritygame-generator. Then download the random games contained in the analysis directory. Once you have all the .gm in appropriate directories construct a `_filenames.txt` file that contains a newline separated list of all names for each directory. Then call `driver.py testpath resultspath` where testpath is the path to the directory you wish to run the tests on (containing the `_filenames.txt`) and results path is where you want the results created. As the program runs it will generate .res files and add data to a `_timing.txt` file.
+The `testing` directory contains the testing harness. The file `testing/preprocessing_driver.py` contains the preprocessor the testing will run on and runs the tests, `testing/testing_driver.py` contains the functions to read the files into a `Game` object. The `testing/data_analysis.py` and `testing/data_comparison.py` collate the results into a single json, for a single directory or pair of directories respectively.
 
-Note that if you want to run the same tests as me use only the tests listed in the `_filenames.txt` file the results have. Finally you may need to edit `read_into_game` in `driver.py`, as each benchmark uses slightly different formats there just comment out the irrelevant code and it will work.
+#### Other Code
+
+The repo contains various other algorithms that were developed over the year before arriving at ptta, I have left these for posterity but each is either theoretically incorrect or underpowered and thus can be ignored. Additionally, many will have not been updated in some time and likely will simply not run.
+
+### Understanding the Results
+
+The results in `results_collation.zip` give for each set of games, and for each preprocessor tested, the filelists for games solved/unsolved/timedout and the times it took to solve the games that didn't time out.
+
+### Running Benchmarks Yourself
+
+If you wish to run the tests yourself download the benchmarks by going to https://github.com/jkeiren/paritygame-generator. Once you have all the .gm in appropriate directories construct a `_filenames.txt` file that contains a newline separated list of all names for each directory `ls > _filenames.txt`. Then call `python testing/preprocessing_driver.py testpath resultspath` where testpath is the path to the directory you wish to run the tests on (containing the `_filenames.txt`) and results path is where you want the results created. Note that `preprocessing_driver.py` uses UNIX signals for timing and so will not run on Windows. As the program runs it will generate .json files each containing detailed results of an individual test. To collate these, add a `_filenames.txt` file to the results directory and make a `python testing/data_analysis.py resultspath analysisfilepath` and it will output a .json file with the collated results.
+
+Finally you may need to edit `read_into_game` in `testing_driver.py`, as each benchmark uses slightly different formats, doing so is a matter of commenting out the lines indicated for each pair.
